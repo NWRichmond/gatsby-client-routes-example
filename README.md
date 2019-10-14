@@ -7,6 +7,7 @@
 <h1 align="center">
   Gatsby Client Routes Example
 </h1>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1eeaaf5-afad-4c11-88b3-2f5ea85b6c9d/deploy-status)](https://app.netlify.com/sites/blissful-hugle-d3a663/deploys)
 
 
