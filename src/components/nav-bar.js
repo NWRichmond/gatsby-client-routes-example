@@ -22,12 +22,8 @@ const NavBar = styled.nav`
 
 const Navigation = () => (
   <NavBar>
-    <Link to="/">
-      Home
-    </Link>
-    <Link to="/about">
-      About
-    </Link>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
     <Link to="/account" className="private">
       My Account
     </Link>
