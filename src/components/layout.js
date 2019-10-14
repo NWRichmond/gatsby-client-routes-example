@@ -36,10 +36,20 @@ const Layout = ({ children }) => {
         }}
       >
         <Navigation />
+        <div style={{ textAlign: `end`, color: '#949494' }}>
+          view on{' '}
+          <a
+            href="https://github.com/NWRichmond/gatsby-client-routes-example/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#949494' }}
+          >
+            GitHub
+          </a>
+        </div>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
+          © {new Date().getFullYear()}, Built with{' '}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
