@@ -4,15 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions;
+const clientRoutes = ['account']; // add all client-only routes to this array
 
+exports.onCreatePage = async ({ page, actions }) => {
   // page.matchPath is a special key that's used for matching pages
   // only on the client.
-  if (page.path.match(/^\/account/)) {
-    page.matchPath = '/account/*';
-
-    // Update the page.
-    createPage(page);
+  const { createPage } = actions;
+  for (const route of clientRoutes) {
+    const regexRoute = new RegExp(`/${route}`);
+    const path = `/${route}/*`;
+    if (page.path.match(regexRoute)) {
+      page.matchPath = path;
+      // Update the page.
+      createPage(page);
+    }
   }
 };
